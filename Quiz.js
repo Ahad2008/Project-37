@@ -31,29 +31,29 @@ class Quiz {
   }
 
   play(){
+    question.hide();
     background("Yellow");
     fill(0);
     textSize(30);
-    text("Result of the Quiz",40, 450);
+    text("Result of the Quiz",340, 50);
     text("----------------------------",320, 65);
     Contestant.getPlayerInfo();
-   
     if(allContestants !== undefined){
       debugger;
-      var display_Answers = 530;
+      var display_Answers = 230;
       fill("Blue");
       textSize(20);
-      text("*NOTE: Contestant who answered correct are highlighted in green color!", 130, 490);
+      text("*NOTE: Contestant who answered correct are highlighted in green color!",130,230);
 
       for(var plr in allContestants){
         debugger;
-        var correctAns = "2";
+        var correctAns = "NOON";
         if (correctAns === allContestants[plr].answer)
           fill("Green")
         else
           fill("red");
 
-        display_Answers += 30;
+        display_Answers+=30;
         textSize(20);
         text(allContestants[plr].name + ": " + allContestants[plr].answer, 250,display_Answers)
       }
