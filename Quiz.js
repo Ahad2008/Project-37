@@ -47,8 +47,9 @@ class Quiz {
 
       for(var plr in allContestants){
         debugger;
-        var correctAns = "NOON";
-        if (correctAns === allContestants[plr].answer)
+        var correctAns1 = "NOON";
+        var correctAns2 = "noon";
+        if (correctAns1 === allContestants[plr].answer||correctAns2 === allContestants[plr].answer)
           fill("Green")
         else
           fill("red");
